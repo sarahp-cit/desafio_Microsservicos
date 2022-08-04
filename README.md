@@ -12,6 +12,8 @@ Então vamos ter dois microsserviços: um de pedido e outro de
 pagamento, cada um com seu banco de dados e vamos simular a nossa
 aplicação na prática. Então façam um CRUD para cada um dos microsserviços, estruturando-os no padrão camada MVC. Crie os pacotes controller, model, repository, e service e dto. Utilize o padrão DTO (data transfer object) no projeto para expormos somente os atributos desejados na aplicação.
 
+Crie as APIs dos microsserviços do zero, ou reaproveite o que for possível do material dos desafios anteriores refatorando quando necessário. Vamos usar as migrations para criar as tabelas no banco de dados para  o versionamento.
+
 Adicione as dependências que vamos precisar para o projeto. Vamos usar estas, e mais as que o desafiado julgar necessárias: 
 
 - Spring Web
