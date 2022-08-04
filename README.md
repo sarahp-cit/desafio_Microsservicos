@@ -81,7 +81,7 @@ Adicione as dependências que vamos precisar para o projeto. Vamos usar estas, e
 
  ## Desafio Opcional 1: Versionamento do Banco de dados com Migration
   
-Vamos usar as migrations para criar as tabelas no banco de dados para  o versionamento. Como uma abordagem de pensarmos em boas práticas, é interessante a ideia de utilizar o  Flyway Migration, que faz um versionamento de controle do nosso banco de dados, ele trabalha com migration, e a partir disso conseguimos verificar o histórico da evolução do banco de dados, quando a tabela foi criada, alterada e se foi incluído algum campo, por exemplo.
+Vamos usar as migrations para criar as tabelas no banco de dados com o versionamento. Pensando em boas práticas, é interessante a ideia de utilizar o  Flyway Migration, que faz um versionamento de controle do nosso banco de dados, e a partir disso conseguimos verificar o histórico da evolução do banco de dados, quando a tabela foi criada, alterada e se foi incluído algum campo, por exemplo.
   
 Dentro da pasta db.migration, crie o arquivo chamado V1__criar_tabela_pagamentos.sql
 Para ganharmos tempo, add o seguinte código dentro do arquivo:
