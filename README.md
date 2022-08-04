@@ -10,6 +10,7 @@ Abaixo estão links de apoio que poderão auxiliar na resolução do desafio.
 | ------ | ------ |
 | Spring Boot | [https://www.devmedia.com.br/primeiros-passos-com-o-spring-boot/33654#Spring] |
 | Spring Boot | [https://www.youtube.com/watch?v=JLShKaS0XxY] |
+| Spring Initializr | [https://start.spring.io/] |
 | Boas práticas Rest | [https://www.youtube.com/watch?v=P-juXKmJy_g] |
 | Migrations | [https://www.youtube.com/results?search_query=migration+java] |
 | Discovery | [https://github.com/jezielleciandt/desafio_Microsservicos] |
