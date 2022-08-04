@@ -16,6 +16,6 @@ Abaixo estão links de apoio que poderão auxiliar na resolução do desafio.
 | Discovery | [https://www.youtube.com/watch?v=Td_6NcZJ4WM][PlGd] |
 | Feign | [https://domineospring.wordpress.com/2017/06/02/feign-uma-forma-simples-para-consumir-servicos/][PlGd] |
 | Feign | [https://www.youtube.com/watch?v=zRZuZrwYYc0][PlGd] |
-| ModelMapper | [phttps://www.youtube.com/watch?v=HU7bfKG8nV4][PlOd] |
+| ModelMapper | [https://www.youtube.com/watch?v=HU7bfKG8nV4][PlOd] |
 | ModelMapper| [https://medium.com/@hectordemedeiros/criando-uma-api-rest-em-springboot-utilizando-modelmapper-b56515c62e84][PlMe] |
 | Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
