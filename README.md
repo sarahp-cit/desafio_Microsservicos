@@ -64,13 +64,13 @@ Adicione as dependências que vamos precisar para o projeto. Vamos usar estas, e
 - private String codigo;
 - private Status status;
 - private Long pedidoId;
-- private FormaDePagamento formaDePagamento; 
+- private FormaDePagamento formaDePagamento. 
 
 ### Enum Status
 
 - CRIADO;
 - CONFIRMADO;
-- CANCELADO;
+- CANCELADO.
   
 ### Enum FormaDePagamento
 
