@@ -4,17 +4,15 @@
 
 A ideia é continuar trabalhando com o Total Shake, e vamos utilizar um tipo de arquitetura de microsserviços em que o Total Shake era um monolito e decidimos quebrar a aplicação em parte e transformá-la em microsserviço.
 
-Para iniciar um projeto usando o Spring, vou usar o site padrão "start.spring.io", esse é o Spring Initializr que facilita para começarmos o projeto do zero.
+Para iniciar um projeto usando o Spring, podemos usar o site padrão "start.spring.io", esse é o Spring Initializr que facilita para começarmos o projeto do zero.
 
-Vamos escolher que é um projeto que vai utilizar o Maven, logo vamos selecionar a opção "Maven Project" em "Project" para controlar as dependências e como ferramenta de build.
+Então vamos ter dois microsserviços: um de Pedido e outro de
+Pagamento, cada um com seu banco de dados e vamos simular a nossa
+aplicação na prática. Então façam um CRUD para cada um dos microsserviços, estruturando-os no padrão camada MVC. Crie os pacotes controller, model, repository, service e dto. Utilize o padrão DTO (data transfer object) no projeto para expormos somente os atributos desejados na aplicação.
 
-Então vamos ter dois microsserviços: um de pedido e outro de
-pagamento, cada um com seu banco de dados e vamos simular a nossa
-aplicação na prática. Então façam um CRUD para cada um dos microsserviços, estruturando-os no padrão camada MVC. Crie os pacotes controller, model, repository, e service e dto. Utilize o padrão DTO (data transfer object) no projeto para expormos somente os atributos desejados na aplicação.
+Crie as APIs dos microsserviços do zero. 
 
-Crie as APIs dos microsserviços do zero, ou reaproveite o que for possível do material dos desafios anteriores refatorando quando necessário. Vamos usar as migrations para criar as tabelas no banco de dados para  o versionamento.
-
-Adicione as dependências que vamos precisar para o projeto. Vamos usar estas, e mais as que o desafiado julgar necessárias: 
+Adicione as dependências que vamos precisar para o projeto. Vamos usar estas, e mais as que você julgar necessárias: 
 
 - Spring Web
 - Spring Data JPA
@@ -22,8 +20,8 @@ Adicione as dependências que vamos precisar para o projeto. Vamos usar estas, e
 - Spring Boot DevTools
 - Lombok
 - Validation
-- Flyway Migration
-- Feign
+- Flyway Migration (opcional)
+- Feign 
 
 ## API Pedidos:
 
@@ -81,6 +79,57 @@ Adicione as dependências que vamos precisar para o projeto. Vamos usar estas, e
 - CARTAO_DEBITO;
 - CARTAO_CREDITO.  
 
+ ## Desafio Opcional 1: Versionamento do Banco de dados com Migration
+  
+Vamos usar as migrations para criar as tabelas no banco de dados para  o versionamento. Como uma abordagem de pensarmos em boas práticas, é interessante a ideia de utilizar o  Flyway Migration, que faz um versionamento de controle do nosso banco de dados, ele trabalha com migration, e a partir disso conseguimos verificar o histórico da evolução do banco de dados, quando a tabela foi criada, alterada e se foi incluído algum campo, por exemplo.
+  
+Dentro da pasta db.migration, crie o arquivo chamado V1__criar_tabela_pagamentos.sql
+Para ganharmos tempo, add o seguinte código dentro do arquivo:
+  
+```
+CREATE TABLE pagamentos (
+ id bigint(20) NOT NULL AUTO_INCREMENT,
+ valor decimal(19,2) NOT NULL,
+ nome varchar(100) DEFAULT NULL,
+ numero varchar(19) DEFAULT NULL,
+ expiracao varchar(7) DEFAULT NULL,
+ codigo varchar(3) DEFAULT NULL,
+ status varchar(255) NOT NULL,
+ forma_de_pagamento_id bigint(20) NOT NULL,
+ pedido_id bigint(20) NOT NULL,
+PRIMARY KEY (id)
+);
+```
+  
+
+Por fim, quando rodarmos a aplicação Spring Boot, o Flyway, de forma automática ela cria a base de dados para gerar a tabela de pagamentos de acordo com o script abaixo, que deve estar no arquivo application.properties, informando informando o driver do banco de sua preferência, a URL do banco de dados que queremos criar e o nome e a senha do usuário. 
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/alurafood-pagamento?createDatabaseIfNotExist=true
+spring.datasource.username=seuusernamedobanco
+spring.datasource.password=suasenhadobanco
+spring.jpa.show-sql=true
+
+  
+## Desafio Opcional 2: 
+  
+Vantagens de se utilizar o service discovery em Microsserviços:
+-   Ter um serviço onde as instâncias possam se registrar;
+-   Descobrir de forma dinâmica, o endereço das instâncias do serviço que deseja consumir.
+  
+Então a ideia é termos um projeto que vai atuar no service discovery. Então vamos ter um servidor e os microsserviços que vão poder se registrar nele para ocorrer a comunicação.
+
+Para criarmos o primeiro servidor para fazer o service discovery vamos usar o Eureka Server . 
+Para o service discovery, crie o projeto chamado server,  utilizando o SpringInitializr. Como parte da configuração, add a dependência Eureka Discovery Server.  
+
+## Desafio Opcional 3:   
+
+Quando o pagamento for confirmado, uma mensagem será enviada para o microsserviço de pedidos, indicando que o pedido está pago.
+
+Para isso, o microsserviço de pagamento deve realizar  uma requisição do tipo PUT passando o Id do pedido, e o status como pago. O microsserviço de pedidos recebe a requisição, e troca o status.
+
+Para realizar a comunicação síncrona, utilize o Spring Cloud OpenFeign, que é uma solução do Spring que utiliza um cliente HTTP justamente para fazer integrações de Back-End para Back-End.
+  
+  
 ### Conteúdo Auxiliar
 
 Abaixo estão links de apoio que poderão auxiliar na resolução do desafio.
