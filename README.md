@@ -73,6 +73,13 @@ Adicione as dependências que vamos precisar para o projeto. Vamos usar estas, e
 - CRIADO;
 - CONFIRMADO;
 - CANCELADO;
+  
+### Enum FormaDePagamento
+
+- PIX;
+- DINHEIRO;
+- CARTAO_DEBITO;
+- CARTAO_CREDITO.  
 
 ### Conteúdo Auxiliar
 
