@@ -14,10 +14,9 @@ Abaixo estão links de apoio que poderão auxiliar na resolução do desafio.
 | API RESTful | [https://mari-azevedo.medium.com/construindo-uma-api-restful-com-java-e-spring-framework-46b74371d107] |
 | Boas práticas Rest | [https://www.youtube.com/watch?v=P-juXKmJy_g] |
 | Migrations | [https://www.youtube.com/results?search_query=migration+java] |
-| Discovery | [https://github.com/jezielleciandt/desafio_Microsservicos] |
 | Discovery | [https://www.youtube.com/watch?v=Td_6NcZJ4WM] |
 | Feign | [https://domineospring.wordpress.com/2017/06/02/feign-uma-forma-simples-para-consumir-servicos/] |
 | Feign | [https://www.youtube.com/watch?v=zRZuZrwYYc0] |
 | ModelMapper | [https://www.youtube.com/watch?v=HU7bfKG8nV4] |
 | ModelMapper| [https://medium.com/@hectordemedeiros/criando-uma-api-rest-em-springboot-utilizando-modelmapper-b56515c62e84] |
-
+| Assunto | [link] |
