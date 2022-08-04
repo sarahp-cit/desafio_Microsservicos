@@ -113,7 +113,7 @@ spring.jpa.show-sql=true
   ```
 
   
-## Desafio Opcional 2: 
+## Desafio Opcional 2 - Service DIscovery (Serviço de Descoberta): 
   
 Vantagens de se utilizar o service discovery em Microsserviços:
 -   Ter um serviço onde as instâncias possam se registrar;
