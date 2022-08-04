@@ -1,5 +1,5 @@
 # desafio_Microsserviços
-#### Exercício assunto Microsserviços.
+#### Exercício sobre o assunto de Microsserviços.
 
 
 A ideia é continuar trabalhando com o Total Shake, e vamos utilizar um tipo de arquitetura de microsserviços em que o Total Shake era um monolito e decidimos quebrar a aplicação em parte e transformá-la em microsserviço.
