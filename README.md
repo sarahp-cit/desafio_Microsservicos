@@ -113,7 +113,10 @@ spring.jpa.show-sql=true
   ```
 
   
-## Desafio Opcional 2 - Service DIscovery (Serviço de Descoberta): 
+## Desafio Opcional 2 - Service Discovery (Serviço de Descoberta): 
+  
+ Service Discovery é um tipo de catálogo que vai conter o endereço de todas as
+instâncias e microsserviços que estão registrados nele.
   
 Vantagens de se utilizar o service discovery em Microsserviços:
 -   Ter um serviço onde as instâncias possam se registrar;
