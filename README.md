@@ -147,6 +147,8 @@ Abaixo estão links de apoio que poderão auxiliar na resolução do desafio.
 | Boas práticas Rest | [https://www.youtube.com/watch?v=P-juXKmJy_g] |
 | Migrations | [https://www.youtube.com/results?search_query=migration+java] |
 | Discovery | [https://www.youtube.com/watch?v=Td_6NcZJ4WM] |
+| Discovery | [https://www.youtube.com/watch?v=cOQQYrhYH4U] |
+| Discovery | [https://www.youtube.com/watch?v=-gLLeoS1m6s] |  
 | Discovery | [https://4soft.co/tutorial-how-to-implement-service-discovery-with-eureka-java/] |
 | Feign | [https://domineospring.wordpress.com/2017/06/02/feign-uma-forma-simples-para-consumir-servicos/] |
 | Feign | [https://www.youtube.com/watch?v=zRZuZrwYYc0] |
