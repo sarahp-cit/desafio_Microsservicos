@@ -25,6 +25,54 @@ Adicione as dependências que vamos precisar para o projeto. Vamos usar estas, e
 - Flyway Migration
 - Feign
 
+## API Pedidos:
+
+### Classe Pedido
+
+- private Long id (Chave primária, autogerada);
+- private LocalDateTime dataHora;
+- private Status status;
+- List<ItemDoPedido> itens.
+
+
+### Enum Status
+
+- REALIZADO;
+- CANCELADO;
+- PAGO;
+- NAO_AUTORIZADO;
+- CONFIRMADO;
+- PRONTO;
+- SAIU_PARA_ENTREGA;
+- ENTREGUE.
+
+### Classe Item do Pedido
+
+- private Long id (Chave primária, autogerada);
+- private Integer quantidade;
+- private String descricao;
+- private Pedido pedido.
+
+
+## API Pagamentos:
+
+### Classe Pagamento
+
+- private Long id (Chave primária, autogerada);
+- private BigDecimal valor;
+- private String nome;
+- private String numero;
+- private String expiracao;
+- private String codigo;
+- private Status status;
+- private Long pedidoId;
+- private Long formaDePagamentoId; 
+
+### Enum Status
+
+- CRIADO;
+- CONFIRMADO;
+- CANCELADO;
 
 ### Conteúdo Auxiliar
 
@@ -39,8 +87,9 @@ Abaixo estão links de apoio que poderão auxiliar na resolução do desafio.
 | Boas práticas Rest | [https://www.youtube.com/watch?v=P-juXKmJy_g] |
 | Migrations | [https://www.youtube.com/results?search_query=migration+java] |
 | Discovery | [https://www.youtube.com/watch?v=Td_6NcZJ4WM] |
+| Discovery | [https://4soft.co/tutorial-how-to-implement-service-discovery-with-eureka-java/] |
 | Feign | [https://domineospring.wordpress.com/2017/06/02/feign-uma-forma-simples-para-consumir-servicos/] |
 | Feign | [https://www.youtube.com/watch?v=zRZuZrwYYc0] |
 | ModelMapper | [https://www.youtube.com/watch?v=HU7bfKG8nV4] |
 | ModelMapper| [https://medium.com/@hectordemedeiros/criando-uma-api-rest-em-springboot-utilizando-modelmapper-b56515c62e84] |
-| Assunto | [link] |
+
