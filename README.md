@@ -18,4 +18,4 @@ Abaixo estão links de apoio que poderão auxiliar na resolução do desafio.
 | Feign | [https://www.youtube.com/watch?v=zRZuZrwYYc0] |
 | ModelMapper | [https://www.youtube.com/watch?v=HU7bfKG8nV4] |
 | ModelMapper| [https://medium.com/@hectordemedeiros/criando-uma-api-rest-em-springboot-utilizando-modelmapper-b56515c62e84] |
-| Google Analytics | [plugins/googleanalytics/README.md] |
+
