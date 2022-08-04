@@ -125,7 +125,7 @@ Vantagens de se utilizar o service discovery em Microsserviços:
 Então a ideia é termos um projeto que vai atuar no service discovery. Então vamos ter um servidor e os microsserviços que vão poder se registrar nele para ocorrer a comunicação.
 
 Para criarmos o primeiro servidor para fazer o service discovery vamos usar o Eureka Server . 
-Para o service discovery, crie o projeto chamado server,  utilizando o SpringInitializr. Como parte da configuração, add a dependência Eureka Discovery Server.  
+Para o service discovery, crie o projeto chamado server,  utilizando o SpringInitializr. Como parte da configuração, adicione a dependência Eureka Discovery Server.  
 
 ## Desafio Opcional 3:   
 
