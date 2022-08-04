@@ -65,6 +65,15 @@ Adicione as dependências que vamos precisar para o projeto. Vamos usar estas, e
 - private Status status;
 - private Long pedidoId;
 - private FormaDePagamento formaDePagamento. 
+  
+  Obs: Para os atributos, pratiquem a ideia de programação defensiva, realizando as validações através das annotations do Validation, desta forma:
+
+O atributo valor deve receber somente números positivos, e não dever ser nulo.
+Nome não deve estar em branco, e deve conter no máximo 100 caracteres.
+Numero não deve estar em branco, e deve conter no máximo 100 caracteres.
+Código não deve estar em branco, e deve conter no mínimo  3 e no máximo 3 caracteres
+Enum Status, não deve ser nula. Dica: utilizar também o Enumerated(EnumType.STRING)
+
 
 ### Enum Status
 
