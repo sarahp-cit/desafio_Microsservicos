@@ -102,12 +102,15 @@ PRIMARY KEY (id)
 ```
   
 
-Por fim, quando rodarmos a aplicação Spring Boot, o Flyway, de forma automática ela cria a base de dados para gerar a tabela de pagamentos de acordo com o script abaixo, que deve estar no arquivo application.properties, informando informando o driver do banco de sua preferência, a URL do banco de dados que queremos criar e o nome e a senha do usuário. 
+Por fim, quando rodarmos a aplicação Spring Boot, o Flyway, de forma automática ela cria a base de dados para gerar a tabela de pagamentos de acordo com o código abaixo, que deve estar no arquivo application.properties, informando o driver do banco de sua preferência, a URL do banco de dados que queremos criar e o nome e a senha do usuário. 
+  
+  ```
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.url=jdbc:mysql://localhost:3306/alurafood-pagamento?createDatabaseIfNotExist=true
 spring.datasource.username=seuusernamedobanco
 spring.datasource.password=suasenhadobanco
 spring.jpa.show-sql=true
+  ```
 
   
 ## Desafio Opcional 2: 
